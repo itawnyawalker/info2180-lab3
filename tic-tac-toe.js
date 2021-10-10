@@ -76,10 +76,6 @@ function getWinner(){
 		}
 		else if (state.every(e => typeof e != 'undefined')){
 			console.log("continue");
-		}
-		else{
-			stat.innerHTML = "Congratulations! It is a Draw!";
-			stat.classList.add("you-won");
 		}	
 }
 
