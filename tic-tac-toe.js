@@ -21,7 +21,7 @@ function load_board(){
 				state[i] = "O";
 				getWinner();
 			}
-			else {
+			else if (square[i].innerHTML == "" && move == "X"){
 				square[i].classList.add("X");
 				square[i].innerHTML = "X";
 				move = "O";
@@ -74,9 +74,6 @@ function getWinner(){
 			stat.classList.add("you-won");
 			console.log("state 8");
 		}
-		else if (state.every(e => typeof e != 'undefined')){
-			console.log("continue");
-		}	
 }
 
 function reload() {
@@ -92,6 +89,7 @@ function reload() {
 		stat.classList.remove("you-won");
 		
 	}
+	console.log("New game loaded");
 }
 
 
